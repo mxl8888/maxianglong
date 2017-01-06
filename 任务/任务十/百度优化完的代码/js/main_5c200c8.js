@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#nav-a").hover(function(){$("#more-product").slideToggle(500)});var n;$("#tabfirst li").each(function(t){$(this).click(function(){n=setTimeout(function(){$(".containerbtn ").removeClass("a"),$(".containerbtn").eq(t).addClass("a")},10)}).mouseout(function(){clearTimeout(n)})})});

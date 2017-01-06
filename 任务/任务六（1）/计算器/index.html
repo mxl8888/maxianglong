@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>简易计算器</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <script type="text/javascript"  src="js/index.js"></script>
+</head>
+<body onload="onLoad()">
+<div id="calculator">
+    <div class="LOGO">
+        <span class="name">简单的计算器</span>
+    </div>
+    <div id="shuRu">
+        <!--screen输入栏-->
+        <div class="screen">
+            <input type="text" id="screenName" name="screenName" class="screen" value="">
+        </div>
+    </div>
+    <div id="keys">
+            <!-- operators and other keys -->
+            <!--第一排-->
+            <input type="button" id="7" onclick="jsq(this)" value="7">
+            <input type="button" id="8" onclick="jsq(this)" value="8">
+            <input type="button" id="9" onclick="jsq(this)" value="9">
+            <input type="button" id="Back" onclick="tuiGe()" value="Back">
+            <input type="button" id="C" onclick="clearNum()" value="C" >
+            <!--第二排-->
+            <input type="button" id="4" onclick="jsq(this)" value="4">
+            <input type="button" id="5" onclick="jsq(this)" value="5">
+            <input type="button" id="6" onclick="jsq(this)" value="6">
+            <input type="button" id="*" onclick="jsq(this)" value="*">
+            <input type="button" id="/" onclick="jsq(this)" value="/" >
+            <!--第三排-->
+            <input type="button" id="1" onclick="jsq(this)" value="1" >
+            <input type="button" id="2" onclick="jsq(this)" value="2" >
+            <input type="button" id="3" onclick="jsq(this)" value="3" >
+            <input type="button" id="+" onclick="jsq(this)" value="+" >
+            <input type="button" id="-" onclick="jsq(this)" value="-" >
+            <!--第四排-->
+            <input type="button" id="0" onclick="jsq(this)" value="0" >
+            <input type="button" id="00" onclick="jsq(this)" value="00" >
+            <input type="button" id="." onclick="jsq(this)" value="." >
+            <input type="button" id="%" onclick="jsq(this)" value="%">
+            <input type="button" id="eva" onclick="eva()" value="=">
+            <!--第四排-->
+            <input type="button" id="sin" onclick="jsq(this)" value="sin" >
+            <input type="button" id="cos" onclick="jsq(this)" value="cos" >
+        </div>
+    </div>
+</body>
+</html>

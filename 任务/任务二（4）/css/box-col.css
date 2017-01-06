@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+}
+.con{
+    display:-webkit-flex;
+    width:600px;
+    background-color:deepskyblue;
+    -webkit-flex-direction: column;
+    height:600px;
+}
+.first{
+    height:100px;
+    -webkit-flex:1;
+    background-color:orange;
+    -webkit-order: 3;
+}
+#second{
+    height:100px;
+    -webkit-flex:1;
+    background-color:aquamarine;
+    -webkit-order: 2;
+}
+#third{
+    height: 200px;
+    -webkit-flex:1;
+    background-color:darkgoldenrod;
+    -webkit-order: 1;
+}

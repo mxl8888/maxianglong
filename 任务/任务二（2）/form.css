@@ -1,0 +1,71 @@
+*{
+    padding:0;
+    margin: 0;
+}
+body{
+    background-color: #0D7792;
+    font-size: 14px;
+}
+header{
+    margin-top: 20px;
+}
+.box{
+    background-color: #fff;
+    width: 800px;
+    border-radius:25px;
+    margin:0 auto;
+}
+.box1 {
+    width: 710px;
+    margin: 0 auto;
+}
+.right{
+    width: 136px;
+    text-align: right;
+}
+.star{
+    color: red;
+}
+header div a{
+    text-decoration: none;
+    color:red;
+}
+header div{
+    position: relative;
+    left:580px;
+}
+caption{
+    padding-bottom: 20px;
+}
+.head{
+    text-align: center;
+}
+input{
+  margin: 3px;
+}
+select{
+    margin: 3px;
+}
+textarea{
+    margin: 3px;
+    text-align:left;
+}
+.blue{
+    color: blue;
+}
+.blue1{
+    color: blue;
+    padding-left: 20px;
+}
+button{
+    width: 80px;
+    margin:40px 305px;
+}
+footer{
+    text-align: center;
+    margin-bottom:30px;
+    padding-bottom: 20px;
+}
+footer p{
+    display: inline;
+}

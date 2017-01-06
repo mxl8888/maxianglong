@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>数组和对象</title>
+</head>
+<body>
+<script type="text/javascript">
+	//定义一个数组，取出数组中最多的字母，出现次数，所在位置
+	var arr = ['e' , 'a'  , 'b' , 'c' , 'd' , 'e' , 'a' , 'a' , 'd', 'e'  , 'a'  ];
+	//检查数组是否正常
+	document.write('我的数组：' + arr + '<br>'  + '数组长度：' + arr.length + '<br>' +'----------------------------------------'  + '<br>');
+
+	//定义一个计数数组，初始值为空，用于记录值的个数
+	var count =[];
+	//定义一个索引数组，初始值为空，用于记录值得位置
+	var pos =[];
+
+	//遍历数组，对每个值进行计数
+	//for循环 从0开始读出数组的每个值
+	for (var i = 0; i < arr.length; i++) {
+		//把数组中的每个值赋给变量char，通过对char的判断，开始记录每个值的个数和位置
+		var char = arr[i];
+		//判断计数，索引数组中是否含有arr的值
+		if (count[char]) {
+			//如果计数数组中有arr的值,那么计数数组中此值加1 例如里面有a 结果为2
+			count[char] += 1;
+			//记录arr中值的位置  此处记录过第一次遍历时候的值，前面加，隔开
+			pos[char] += ',' + i;
+			//alert(pos[char]);
+		} else {
+			//如果计数数组中没有arr的值，那么计数数组中加入1 例如里面有a 结果为1
+			count[char] = 1;
+			//alert(count[char]);
+			//记录arr中值的位置 从0开始
+			pos[char] = i;
+			//alert(pos[char]);
+		}
+	}
+	//打印出计数数组中的值
+
+	document.write('计数数组：' );
+	for(var a in count){
+		document.writeln(a+':'+count[a]);
+	}
+	document.write('<br>');
+	//打印出索引数组中的值
+	document.write('索引数组：' );
+	for(var a in pos){
+		document.writeln(a+':'+pos[a]);
+	}
+	document.write('<br>');
+
+	//以上步骤已经将arr数组中每个值的个数 位置 分成了两个数组显示
+
+	//返回出现次数最多的字母的次数（降序排列后取第一个数字)
+	//定义一个变量为max
+	var max;
+	//求最大值
+	//打印出数组count的键值
+	document.write('计数数组的键：'+Object.keys(count)+'<br>');
+	//sort() 方法用于对数组的元素进行排序。对count的键值进行比较 返回最大值<=可能有几个最大值
+	max = count[Object.keys(count).sort(function(a, b) {
+		return count[a] <= count[b];
+	})[0]];
+
+	//出现次数最多的字母如果有多个，全部写入arr_pu数组中，并输出
+	//定义一个储存最大值的数组
+	var arr_pu = [];
+	//遍历count计数数组 指定i 在count中循环
+	for (i in count) {
+		//如果计数数组中有值大于等于最大值（大于就是显得严谨）
+		if (count[i] >= max) {
+			//最大值就是这个值
+			max = count[i];
+			//在数组尾部添加一个值
+			arr_pu.push(i);
+		}
+	}
+	//打印出这个数组
+	document.write('----------------------------------------'+'<br>'+'出现次数最多的字母是:' + arr_pu + '<br>');
+
+	//打印出这个数组 键值
+	document.write('索引数组：' );
+	for(var a in arr_pu){
+		document.writeln(a+':'+arr_pu[a]);
+	}
+	document.write('<br>');
+
+	//遍历arr_pu最大值数组 显示出arr_pu的key对应得次数和位置
+	for (var i = 0; i < arr_pu.length; i++) {
+		//定义一个变量key 它的值为数组中的值
+		key = arr_pu[i];
+		//打印数组的值(key) 以此值作为键在计数数组和位置数组中的对应的值
+		document.write(key + '出现的次数为:' + count[key] + '<br>');
+		document.write(key + '的位置分别为:' + pos[key] + '<br>');
+	}
+</script>
+</body>
+</html>

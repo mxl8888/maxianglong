@@ -1,0 +1,1096 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>高级工程师常见面试题</title>
+    <link rel="stylesheet" href="bootstrap.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <table class="table table-hover">
+            <label>高级工程师常见面试题</label>
+            <thead>
+                <tr class="active">
+                    <th>面试题类型</th>
+                    <th>面试题答案</th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td colspan="2" style="font-size: 18px;text-align: center;font-weight: bold;background:darkslategrey;color:#fff;">html部分</td>
+            </tr>
+           <tr>
+               <td>1.你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么?</td>
+               <td>IE: trident内核
+                   Firefox：gecko内核
+                   Safari:webkit内核
+                   Opera:以前是presto内核，Opera现已改用Google Chrome的Blink内核
+                   Chrome:Blink(基于webkit，Google与Opera Software共同开发)
+               </td>
+           </tr>
+            <tr>
+                <td>2.每个HTML文件里开头都有个很重要的东西，Doctype，知道这是干什么的吗？</td>
+                <td>!DOCTYPE 声明位于文档中的最前面的位置，处于 html标签之前。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。
+                </td>
+            </tr>
+            <tr>
+                <td>3.div+css的布局较table布局有什么优点？</td>
+                <td>改版的时候更方便 只要改css文件。
+                    页面加载速度更快、结构化清晰、页面显示简洁。
+                    表现与结构相分离。
+                    易于优化（seo）搜索引擎更友好，排名更容易靠前。
+                </td>
+            </tr>
+            <tr>
+                <td>4.a：img的alt与title有何异同？b：strong与em的异同？</td>
+                <td>alt(alt text):为不能显示图像、窗体或applets的用户代理（UA），alt属性用来指定替换文字。替换文字的语言由lang属性指定。(在IE浏览器下会在没有title时把alt当成 tool tip显示)
+                    title(tool tip):该属性为设置该属性的元素提供建议性的信息。<br />
+                    strong:粗体强调标签，强调，表示内容的重要性
+                    em:斜体强调标签，更强烈强调，表示内容的强调点
+                </td>
+            </tr>
+            <tr>
+                <td>5.你能描述一下渐进增强和优雅降级之间的不同吗?</td>
+                <td>渐进增强 progressive enhancement：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。
+                    优雅降级 graceful degradation：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。<br />
+                    区别：优雅降级是从复杂的现状开始，并试图减少用户体验的供给，而渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要。降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带。
+                </td>
+            </tr>
+            <tr>
+                <td>6.为什么利用多个域名来存储网站资源会更有效？</td>
+                <td>CDN缓存更方便
+                    突破浏览器并发限制
+                    节约cookie带宽
+                    节约主域名的连接数，优化页面响应速度
+                    防止不必要的安全问题
+                </td>
+            </tr>
+            <tr>
+                <td>7.请谈一下你对网页标准和标准制定机构重要性的理解。</td>
+                <td>网页标准和标准制定机构都是为了能让web发展的更‘健康’，开发者遵循统一的标准，降低开发难度，开发成本，SEO也会更好做，也不会因为滥用代码导致各种BUG、安全问题，最终提高网站易用性。</td>
+            </tr>
+            <tr>
+                <td>8.请描述一下cookies，sessionStorage和localStorage的区别？</td>
+                <td>sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。<br><br>
+                    web storage和cookie的区别<br>
+                    Web Storage的概念和cookie相似，区别是它是为了更大容量存储设计的。Cookie的大小是受限的，并且每次你请求一个新的页面的时候Cookie都会被发送过去，这样无形中浪费了带宽，另外cookie还需要指定作用域，不可以跨域调用。
+                    除此之外，Web Storage拥有setItem,getItem,removeItem,clear等方法，不像cookie需要前端开发者自己封装setCookie，getCookie。但是Cookie也是不可以或缺的：Cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在 ，而Web Storage仅仅是为了在本地“存储”数据而生。
+                </td>
+            </tr>
+            <tr>
+                <td>9.简述一下src与href的区别？</td>
+                <td>src用于替换当前元素，href用于在当前文档和引用资源之间确立联系。<br>
+                    src是source的缩写，指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置；在请求src资源时会将其指向的资源下载并应用到文档内，例如js脚本，img图片和frame等元素。<br>
+                    <script src =”js.js”></script><br>
+                    当浏览器解析到该元素时，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。这也是为什么将js脚本放在底部而不是头部。<br>
+                    href是Hypertext Reference的缩写，指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接，如果我们在文档中添加<br>
+                    <link href=”common.css” rel=”stylesheet”/><br>
+                    那么浏览器会识别该文档为css文件，就会并行下载资源并且不会停止对当前文档的处理。这也是为什么建议使用link方式来加载css，而不是使用@import方式。
+                </td>
+            </tr>
+            <tr>
+                <td>10.11.知道的网页制作会用到的图片格式有哪些？</td>
+                <td>png-8，png-24，jpeg，gif，svg。<br>
+                    WebP格式，谷歌（google）开发的一种旨在加快图片加载速度的图片格式。图片压缩体积大约只有JPEG的2/3，并能节省大量的服务器带宽资源和数据空间。Facebook Ebay等知名网站已经开始测试并使用WebP格式。<br>
+
+                    在质量相同的情况下，WebP格式图像的体积要比JPEG格式图像小40%。<br>
+
+                    Apng：全称是“Animated Portable Network Graphics”, 是PNG的位图动画扩展，可以实现png格式的动态图片效果。04年诞生，但一直得不到各大浏览器厂商的支持，直到日前得到 iOS safari 8的支持，有望代替GIF成为下一代动态图标准。
+                </td>
+            </tr>
+            <tr>
+                <td>11.知道什么是微格式吗？谈谈理解。在前端构建中应该考虑微格式吗？</td>
+                <td>微格式（Microformats）是一种让机器可读的语义化XHTML词汇的集合，是结构化数据的开放标准。是为特殊应用而制定的特殊格式。<br><br>
+
+                    优点：将智能数据添加到网页上，让网站内容在搜索引擎结果界面可以显示额外的提示。（应用范例：豆瓣，有兴趣自行google）
+                </td>
+            </tr>
+            <tr>
+                <td>12.在css/js代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次js请求一般情况下有哪些地方会有缓存处理？</td>
+                <td>答案：dns缓存，cdn缓存，浏览器缓存，服务器缓存。</td>
+            </tr>
+            <tr>
+                <td>13.一个页面上有大量的图片（大型电商网站），加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验。</td>
+                <td>图片懒加载，在页面上的未可视区域可以添加一个滚动条事件，判断图片位置与浏览器顶端的距离与页面的距离，如果前者小于后者，优先加载。<br>
+                    如果为幻灯片、相册等，可以使用图片预加载技术，将当前展示图片的前一张和后一张优先下载。<br>
+                    如果图片为css图片，可以使用CSSsprite，SVGsprite，Iconfont、Base64等技术。<br>
+                    如果图片过大，可以使用特殊编码的图片，加载时会先加载一张压缩的特别厉害的缩略图，以提高用户体验。<br>
+                    如果图片展示区域小于图片的真实大小，则因在服务器端根据业务需要先行进行图片压缩，图片压缩后大小与展示一致。
+                </td>
+            </tr>
+            <tr>
+                <td>14.你如何理解HTML结构的语义化？</td>
+                <td>去掉或样式丢失的时候能让页面呈现清晰的结构：<br><br>
+                    html本身是没有表现的，我们看到例如h1是粗体，字体大小2em，加粗；strong是加粗的，不要认为这是html的表现，这些其实html默认的css样式在起作用，所以去掉或样式丢失的时候能让页面呈现清晰的结构不是语义化的HTML结构的优点，但是浏览器都有有默认样式，默认样式的目的也是为了更好的表达html的语义，可以说浏览器的默认样式和语义化的HTML结构是不可分割的。
+                </td>
+            </tr>
+            <tr>
+                <td>15.谈谈以前端角度出发做好SEO需要考虑什么？</td>
+                <td>
+                    了解搜索引擎如何抓取网页和如何索引网页<br>
+                    你需要知道一些搜索引擎的基本工作原理，各个搜索引擎之间的区别，搜索机器人（SE robot 或叫 web crawler）如何进行工作，搜索引擎如何对搜索结果进行排序等等。<br>
+                    Meta标签优化<br>
+                    主要包括主题（Title)，网站描述(Description)，和关键词（Keywords）。还有一些其它的隐藏文字比如Author（作者），Category（目录），Language（编码语种）等。<br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="font-size: 18px;text-align: center;font-weight: bold;background:darkslategrey;color:#fff;">css部分</td>
+            </tr>
+            <tr>
+                <td>1.有哪项方式可以对一个DOM设置它的CSS样式？　</td>
+                <td>外部样式表，引入一个外部css文件内部样式表，将css代码放在 <head> 标签内部内联样式，将css样式直接定义在 HTML 元素内部</td>
+            </tr>
+            <tr>
+                <td>2.CSS都有哪些选择器？</td>
+                <td>派生选择器（用HTML标签申明）<br>
+                    id选择器（用DOM的ID申明）<br>
+                    类选择器（用一个样式类名申明）<br>
+                    属性选择器（用DOM的属性申明，属于CSS2，IE6不支持，不常用，不知道就算了）<br>
+                    除了前3种基本选择器，还有一些扩展选择器，包括：<br>
+                    后代选择器（利用空格间隔，比如div .a{  }）<br>
+                    群组选择器（利用逗号间隔，比如p,div,#a{  }）
+                </td>
+            </tr>
+            <tr>
+                <td>3.CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？</td>
+                <td>最基本的：<br><br>
+
+                    设置display属性为none，或者设置visibility属性为hidden<br><br>
+
+                    技巧性：<br><br>
+
+                    设置宽高为0，设置透明度为0，设置z-index位置在-1000
+                </td>
+            </tr>
+            <tr>
+                <td>4.超链接访问过后hover样式就不出现的问题是什么？如何解决？</td>
+                <td>被点击访问过的超链接样式不在具有hover和active了,解决方法是改变CSS属性的排列顺序: L-V-H-A（link,visited,hover,active）</td>
+            </tr>
+            <tr>
+                <td>5.什么是Css Hack？ie6,7,8的hack分别是什么？</td>
+                <td>针对不同的浏览器写不同的CSS code的过程，就是CSS hack。</td>
+            </tr>
+            <tr>
+                <td>6.行内元素和块级元素的具体区别是什么？行内元素的padding和margin可设置吗？</td>
+                <td>块级元素(block)特性：<br><br>
+
+                    总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示;<br>
+                    宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制;<br>
+                    　　内联元素(inline)特性：<br><br>
+                    和相邻的内联元素在同一行;<br>
+                    宽度(width)、高度(height)、内边距的top/bottom(padding-top/padding-bottom)和外边距的top/bottom(margin-top/margin-bottom)都不可改变（也就是padding和margin的left和right是可以设置的），就是里面文字或图片的大小。<br><br>
+                    浏览器还有默认的天生inline-block元素（拥有内在尺寸，可设置高宽，但不会自动换行），有哪些？<br>
+                    input 、img 、button>、texterea 、label。
+                </td>
+            </tr>
+            <tr>
+                <td>7.什么是外边距重叠？重叠的结果是什么？</td>
+                <td>
+                    外边距重叠就是margin-collapse。<br><br>
+
+                    在CSS当中，相邻的两个盒子（可能是兄弟关系也可能是祖先关系）的外边距可以结合成一个单独的外边距。这种合并外边距的方式被称为折叠，并且因而所结合成的外边距称为折叠外边距。<br><br>
+
+                    折叠结果遵循下列计算规则：<br><br>
+
+                    两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值。<br>
+                    两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。<br>
+                    两个外边距一正一负时，折叠结果是两者的相加的和。
+                </td>
+            </tr>
+            <tr>
+                <td>8.rgba()和opacity的透明效果有什么不同？</td>
+                <td>
+                    rgba()和opacity都能实现透明效果，但最大的不同是opacity作用于元素，以及元素内的所有内容的透明度，<br><br>
+
+                    而rgba()只作用于元素的颜色或其背景色。（设置rgba透明的元素的子元素不会继承透明效果！）
+                </td>
+            </tr>
+            <tr>
+                <td>9.css中可以让文字在垂直和水平方向上重叠的两个属性是什么？</td>
+                <td>
+                    垂直方向：line-height<br>
+                    水平方向：letter-spacing<br><br>
+                    关于letter-spacing的妙用知道有哪些么？<br>
+                    可以用于消除inline-block元素间的换行符空格间隙问题。
+                </td>
+            </tr>
+            <tr>
+                <td>10.px和em的区别。？</td>
+                <td>
+                    px和em都是长度单位，区别是，px的值是固定的，指定是多少就是多少，计算比较容易。em得值不是固定的，并且em会继承父级元素的字体大小。<br><br>
+
+                    浏览器的默认字体高都是16px。所以未经调整的浏览器都符合: 1em=16px。那么12px=0.75em, 10px=0.625em。
+                </td>
+            </tr>
+            <tr>
+                <td>11.描述一个”reset”的CSS文件并如何使用它。知道normalize.css吗？你了解他们的不同之处？</td>
+                <td>
+                    重置样式非常多，凡是一个前端开发人员肯定有一个常用的重置CSS文件并知道如何使用它们。他们是盲目的在做还是知道为什么这么做呢？原因是不同的浏览器对一些元素有不同的默认样式，如果你不处理，在不同的浏览器下会存在必要的风险，或者更有戏剧性的性发生。<br>
+
+                    你可能会用Normalize来代替你的重置样式文件。它没有重置所有的样式风格，但仅提供了一套合理的默认样式值。既能让众多浏览器达到一致和合理，但又不扰乱其他的东西（如粗体的标题）。<br>
+
+                    在这一方面，无法做每一个复位重置。它也确实有些超过一个重置，它处理了你永远都不用考虑的怪癖，像HTML的audio元素不一致或line-height不一致。
+                </td>
+            </tr>
+            <tr>
+                <td>12.Sass、LESS是什么？大家为什么要使用他们？</td>
+                <td>
+                    他们是CSS预处理器。他是CSS上的一种抽象层。他们是一种特殊的语法/语言编译成CSS。<br>
+
+                    例如Less是一种动态样式语言. 将CSS赋予了动态语言的特性，如变量，继承，运算， 函数. LESS 既可以在客户端上运行 (支持IE 6+, Webkit, Firefox)，也可一在服务端运行 (借助 Node.js)。<br><br>
+
+                    为什么要使用它们？<br>
+
+                    结构清晰，便于扩展。<br>
+                    可以方便地屏蔽浏览器私有语法差异。这个不用多说，封装对浏览器语法差异的重复处理，减少无意义的机械劳动。
+                    可以轻松实现多重继承。<br>
+                    完全兼容 CSS 代码，可以方便地应用到老项目中。LESS 只是在 CSS 语法上做了扩展，所以老的 CSS 代码也可以与 LESS 代码一同编译。
+                </td>
+            </tr>
+            <tr>
+                <td>13.display:none与visibility:hidden的区别是什么？</td>
+                <td>
+                    display : 隐藏对应的元素但不挤占该元素原来的空间。<br>
+                    visibility: 隐藏对应的元素并且挤占该元素原来的空间。<br>
+                    即是，使用CSS display:none属性后，HTML元素（对象）的宽度、高度等各种属性值都将“丢失”;而使用visibility:hidden属性后，HTML元素（对象）仅仅是在视觉上看不见（完全透明），而它所占据的空间位置仍然存在。
+                </td>
+            </tr>
+            <tr>
+                <td>14.知道css有个content属性吗？有什么作用？有什么应用？</td>
+                <td>css的content属性专门应用在 before/after 伪元素上，用于来插入生成内容。<br>
+                    after伪元素通过 content 在元素的后面生成了内容为一个点的块级元素，再利用clear:both清除浮动。
+                </td>
+            </tr>
+            <tr>
+                <td>15.知道css计数器（序列数字字符自动递增）吗？如何通过css content属性实现css计数器？</td>
+                <td>css计数器是通过设置counter-reset 、counter-increment 两个属性 、及 counter()/counters()一个方法配合after / before 伪类实现。</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="font-size: 18px;text-align: center;font-weight: bold;background:darkslategrey;color:#fff;">javaScript部分</td>
+            </tr>
+            <tr>
+                <td>1.javascript是面向对象的，怎么体现javascript的继承关系？</td>
+                <td>使用prototype来实现。</td>
+            </tr>
+            <tr>
+                <td>2.javascript的常用对象有哪些？</td>
+                <td>String, Math, Date和Array对象</td>
+            </tr>
+            <tr>
+                <td>3.javascript怎样选中一个checkbox，怎样设置它无效？</td>
+                <td>document.all.cb1[0].disabled = true;</td>
+            </tr>
+            <tr>
+                <td>4.form中的input可以设置为readonly和disable，请问2者有什么区别？</td>
+                <td>readonly不可编辑，但可以选择和复制；值可以传递到后台<br>
+                    disabled不能编辑，不能复制，不能选择；值不可以传递到后台
+                </td>
+            </tr>
+            <tr>
+                <td>5.js中的3种弹出式消息提醒（警告窗口，确认窗口，信息输入窗口）的命令式什么？</td>
+                <td>
+                    alert<br><br>
+                    confirm<br><br>
+                    prompt
+                </td>
+            </tr>
+            <tr>
+                <td>6.javaScript的2种变量范围有什么不同？</td>
+                <td>全局变量：当前页面内有效<br><br>
+
+                    局部变量：方法内有效
+                </td>
+            </tr>
+            <tr>
+                <td>7.列举javaScript的3种主要数据类型，2种复合数据类型和2种特殊数据类型。</td>
+                <td>主要数据类型：string, boolean, number<br><br>
+
+                    复合数据类型：function, object
+                </td>
+            </tr>
+            <tr>
+                <td>8.程序中捕获异常的方法？</td>
+                <td>window.error<br><br>
+
+                    try{}catch(){}finally{}
+                </td>
+            </tr>
+            <tr>
+                <td>9.写出函数DateDemo的返回结果，系统时间假定为今天</td>
+                <td>
+                    function DateDemo(){
+
+                    var d, s="今天日期是：";
+
+                    d = new Date();
+
+                    s += d.getMonth() + "/";
+
+                    s += d.getDate() + "/";
+
+                    s += d.getYear();
+
+                    return s;
+
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>10.写出程序运行的结果？</td>
+                <td>for(i=0, j=0; i<10, j<6; i++, j++){
+
+                    k = i + j;
+
+                    }</td>
+            </tr>
+            <tr>
+                <td>11.运行的结果？
+
+                    function hi(){
+                    var a;
+                    alert(a);
+                    }
+                </td>
+                <td>undefined</td>
+            </tr>
+            <tr>
+                <td>12.运行的结果？
+
+                    function hi(){
+                    var a = null;
+                    alert(a);
+                    }
+                </td>
+                <td>null</td>
+            </tr>
+            <tr>
+                <td>12.浏览器的对象模型？</td>
+                <td>window<br><br>
+
+                    顶级对象<br><br>
+
+                    window.alert(msg)<br>
+
+                    window.prompt()<br>
+
+                    window.confirm()<br>
+
+                    if(window.confirm()){
+
+
+                    }
+
+                    window.open()<br>
+
+                    window.close()<br>
+
+                    document<br><br>
+
+                    document.write()<br>
+
+                    history<br><br>
+
+                    当用户浏览网页时，浏览器保存了一个最近所访问网页的url列表。这个列表就是用history对象表示。<br>
+
+                    history.back():后退<br>
+
+                    history.forward():前进<br>
+
+                    history.go(n):正数表示向前，负数表示向后<br>
+
+                    location<br><br>
+
+                    表示当前打开的窗口或框架的URL信息。<br>
+
+                    location.href：重定向<br>
+
+                    等价于location.assign(url)<br>
+
+                    location.host：类似www.163.com:80<br>
+
+                    navigator<br><br>
+
+                    表示浏览器的信息及js运行的环境<br>
+
+                    navigator.cookieEnabled：该属性表示是否启用cookie<br>
+
+                    screen<br><br>
+
+                    用于显示网页的显示器的大小和颜色<br>
+
+                    screen.width/screen.height：表示显示器的分辨率（总的宽度，高度）</td>
+            </tr>
+            <tr>
+                <td>13、传统事件绑定和符合W3C标准的事件绑定有什么区别？</td>
+                <td>
+                    1、如果说给同一个元素绑定了两次或者多次相同类型的事件，那么后面的绑定会覆盖前面的绑定
+                    2、不支持DOM事件流 事件捕获阶段è目标元素阶段=>事件冒泡阶段
+
+                    符合W3C标准的事件绑定的方式 addEventListener/attachEvent
+                    A、非IE浏览器：
+                    addEventListener
+                    1、 如果说给同一个元素绑定了两次或者多次相同类型的事件，所以的绑定将会依次触发
+                    2、 支持DOM事件流的
+                    3、 进行事件绑定传参不需要on前缀
+                    addEventListener(“click”,function(){},true);//此时的事件就是在事件捕获阶段执行
+                    第三个参数：代表是否在捕获阶段执行，默认值是false
+                    addEventListener(“click”,function(e){
+
+                    })
+                    addEventListener(“click”,function(){},false) 事件在冒泡阶段执行
+                    B、IE浏览器
+                    ie9开始，ie11 edge：addEventListener
+
+                    ie9以前 ie8：attachEvent/detachEvent
+                    1、 进行事件类型传参需要带上on前缀
+                    dom1.attachEvent(“onclick”,functioin(){});
+                    2、 这种方式只支持事件冒泡，不支持事件捕获
+                </td>
+            </tr>
+            <tr>
+                <td>13.IE和标准下有哪些兼容性的写法</td>
+                <td>
+                    ev = ev || window.event è获取触发事件的对象<br><br>
+                    var target = ev.srcElement||ev.target  à获取事件的源对象
+                </td>
+            </tr>
+            <tr>
+                <td>14.call和apply的区别？</td>
+                <td>
+                    call和apply相同点：<br>
+                    都是为了用一个本不属于一个对象的方法，让这个对象去执行<br>
+                    toString.call([],1,2,3)<br>
+                    toString.apply([],[1,2,3])<br>
+                    Object.call(this,obj1,obj2,obj3)<br>
+                    Object.apply(this,arguments)<br><br>
+
+                    区别：call第二个参数开始接受一个参数列表<br>
+                    apply第二个参数开始接受一个参数数组
+                </td>
+            </tr>
+            <tr>
+                <td>15.Javascript创建对象的几种方式？</td>
+                <td>
+                    第一种：对象字面量、Object构造函数<br>
+                    第二种：构造函数<br>
+                    第三种：纯构造函数<br>
+                    第四种：空构造函数+原型<br>
+                    第五种：混合构造函数+原型<br>
+                    第六种：动态原型<br>
+                    第七种：寄生构造函数<br>
+                    第八种：Object.create()——ES5 ie9+
+                </td>
+            </tr>
+            <tr>
+                <td>16.JavaScript this指针、闭包、作用域</td>
+                <td>e. stopPropagation();//标准浏览器阻止事件冒泡<br>
+                    event.canceBubble=true;//ie9之前<br>
+                    阻止默认事件：<br>
+                    为了不让a点击之后跳转，我们就要给他的点击事件进行阻止<br>
+                    return false<br>
+                    e.preventDefault();
+                </td>
+            </tr>
+            <tr>
+                <td>17.javascript的同源策略</td>
+                <td>一段脚本只能读取来自于同一来源的窗口和文档的属性，这里的同一来源指的是主机名、协议和端口号的组合
+
+                    协议：http,ftp https
+                    主机名；localhost 127.0.0.1
+                    端口名：80:
+                    127.0.0.1:1011
+                    http协议的默认端口：80
+                    https:协议的默认端口是8083
+                    同源策略带来的麻烦：ajax在不同域名下的请求无法实现，
+                    如果说想要请求其他来源的js文件，或者json数据，那么可以通过jsonp来解决
+                </td>
+            </tr>
+            <tr>
+                <td>18.编写一个数组去重的方法</td>
+                <td>方法1：<br><br>
+                    1、 先创建一个空数组，用来保存最终的结果<br><br>
+                    2、 循环原数组中的每个元素<br>
+                    3、 再对每个元素进行二次循环，判断是否有与之相同的元素，如果没有，将把这个元素放到新数组中<br>
+                    4、 返回这个新数组
+                    方法2：<br><br>
+                    数组的indexOf()方法返回给定元素能找在数组中找到的第一个索引值，否则返回-1。<br><br>
+
+                    Array.prototype.unique2 = function()
+                    {
+                    var n = []; //一个新的临时数组
+                    for(var i = 0; i < this.length; i++) //遍历当前数组
+                    {
+                    //如果当前数组的第i已经保存进了临时数组，那么跳过，
+                    //否则把当前项push到临时数组里面
+                    if (n.indexOf(this[i]) == -1) n.push(this[i]);
+                    }
+                    return n;
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>19.JavaScript是一门什么样的语言，它有哪些特点？</td>
+                <td>运行环境：浏览器中的JS引擎（v8.。。 ff:splidemonkey）
+                    运行在Node.js：v8引擎上
+                    语言特性：面向对象（创建对象的多种方式，继承的多种方式、原型链），动态语言</td>
+            </tr>
+            <tr>
+                <td>20.如何检测数组的数据类型</td>
+                <td>
+                    方法一、判断其是否具有“数组性质”，如slice()方法。可自己给该变量定义slice方法，故有时会失效<br>
+                    方法二、obj instanceof Array 在某些IE版本中不正确<br>
+                    方法三、toString.call([]);//”[object Array]”<br>
+                    方法四、方法一二皆有漏洞，在ECMA Script5中定义了新方法Array.isArray(), 保证其兼容性，最好的方法如下：<br>
+                    if(typeof Array.isArray==="undefined"){
+                    Array.isArray = function(arg){
+                    return Object.prototype.toString.call(arg)==="[object Array]"
+                    };
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>21.希望获取到页面中所有的checkbox怎么做？</td>
+                <td>
+                    var domList = document.getElementsByTagName(‘input’)
+                    var checkBoxList = [];//返回的所有的checkbox
+                    var len = domList.length;　　//缓存到局部变量
+                    while (len--) {　　
+                    　　if (domList[len].type == ‘checkbox’) {
+                    　　checkBoxList.push(domList[len]);
+                    　　}
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>22.Javascript的事件流模型都有什么？ DOM事件流？</td>
+                <td>“事件冒泡”：事件开始由最具体的元素接受，然后逐级向上传播<br>
+                    “事件捕捉”：事件由最不具体的节点先接收，然后逐级向下，一直到最具体的<br>
+                    “DOM事件流”：三个阶段：事件捕捉，目标阶段，事件冒泡
+                </td>
+            </tr>
+            <tr>
+                <td>23.看下列代码输出为何？解释原因。
+                    var a;
+                    alert(typeof a); // “undefined”
+                    //alert(b); // 报错
+                    b=10;
+                    alert(typeof b);//”number”
+                </td>
+                <td>
+                    undefined会在以下三种情况下产生：<br>
+                    a、一个变量定义了却没有被赋值<br>
+                    b、想要获取一个对象上不存在的属性或者方法:<br>
+                    c、一个数组中没有被赋值的元素
+                </td>
+            </tr>
+            <tr>
+                <td>24.foo = foo||bar ，这行代码是什么意思？为什么要这样写？</td>
+                <td>
+                    这种写法称之为短路表达式
+                    答案：if(!foo) foo = bar; //如果foo存在，值不变，否则把bar的值赋给foo。
+                    短路表达式：作为”&&”和”||”操作符的操作数表达式，这些表达式在进行求值时，只要最终的结果已经可以确定是真或假，求值过程便告终止，这称之为短路求值。
+                    注意if条件的真假判定，记住以下是false的情况：
+                    空字符串、false、undefined、null、0
+                </td>
+            </tr>
+            <tr>
+                <td>25.列举浏览器对象模型BOM里常用的至少4个对象，并列举window对象的常用方法至少5个</td>
+                <td>对象：window document location screen history navigator<br>
+                    方法：alert() confirm() prompt() open() close()
+                </td>
+            </tr>
+            <tr>
+                <td>26.简述创建函数的几种方式？</td>
+                <td>
+                    第一种（函数声明）：<br><br>
+                    function sum1(num1,num2){<br>
+                    return num1+num2;<br>
+                    }<br>
+                    第二种（函数表达式）：<br><br>
+                    var sum2 = function(num1,num2){<br>
+                    return num1+num2;<br>
+                    }<br>
+                    匿名函数：<br>
+                    function(){}:只能自己执行自己<br>
+
+                    第三种（函数对象方式）：了解<br><br>
+                    var sum3 = new Function("num1","num2","return num1+num2");
+                </td>
+            </tr>
+            <tr>
+                <td>27.documen.write和 innerHTML 的区别？</td>
+                <td>
+                    document.write 只能重绘整个页面<br>
+                    innerHTML 可以重绘页面的一部分
+                </td>
+            </tr>
+            <tr>
+                <td>28.内存泄露是什么？</td>
+                <td>内存泄漏指任何对象在您不再拥有或需要它之后仍然存在。
+                    垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用数量为 0（没有其他对象引用过该对象），或对该对象的惟一引用是循环的，那么该对象的内存即可回收。
+                </td>
+            </tr>
+            <tr>
+                <td>29.解释jsonp的原理</td>
+                <td>
+                    动态创建script标签，给请求的地址中添加一个get参数，这个参数代表回调函数，也就是希望服务器处理完我的请求之后，在前端执行这个对调函数
+                </td>
+            </tr>
+            <tr>
+                <td>30.javascript的本地对象，内置对象和宿主对象？</td>
+                <td>
+                    地对象为array obj regexp等可以new实例化<br>
+                    Array RegExp String Boolean 。。。<br>
+                    内置对象为global、Math 等不可以实例化的<br>
+                    关于global对象我们无法在浏览器中发现她的存在，因为他的属性和方法都被绑定在了window对象中<br><br>
+                    每一个宿主对象他的实现都是取决于不同的浏览器的，这样就产生了浏览器兼容性问题<br>
+                    宿主为浏览器自带的document,window 等
+                </td>
+            </tr>
+            <tr>
+                <td>31字符串反转，如将 '12345678' 变成 '87654321'</td>
+                <td>
+                    /大牛做法；<br>
+                    //思路：先将字符串转换为数组 split()，利用数组的反序函数 reverse()颠倒数组，再利用 jion() 转换为字符串<br>
+                    var str = '12345678';<br>
+                    str = str.split('').reverse().join('');
+                </td>
+            </tr>
+            <tr>
+                <td>32.window.location.search返回的是什么？</td>
+                <td>查询(参数)部分。除了给动态语言赋值以外，我们同样可以给静态页面,并使用javascript来获得相信应的参数值
+                    返回值：?ver=1.0&id=timlq 也就是问号后面的！</td>
+            </tr>
+            <tr>
+                <td>33.window.location.hash 返回的是什么？</td>
+                <td>锚点 ， 返回值：#love ；
+                    //url:http://www.sina.com/getage?#age
+                    这时就返回”#age”
+                </td>
+            </tr>
+            <tr>
+                <td>34.window.location.reload() 作用？</td>
+                <td>刷新当前页面。</td>
+            </tr>
+            <tr>
+                <td>35.bind(), live(), delegate()的区别？</td>
+                <td>
+                    bind： 绑定事件，对新添加的事件不起作用，方法用于将一个处理程序附加到每个匹配元素的事件上并返回jQuery对象。
+
+                    live： 方法将一个事件处理程序附加到与当前选择器匹配的所有元素（包含现有的或将来添加的）的指定事件上并返回jQuery对象。
+
+                    delegate： 方法基于一组特定的根元素将处理程序附加到匹配选择器的所有元素（现有的或将来的）的一个或多个事件上。
+
+                </td>
+            </tr>
+            <tr>
+                <td>36.简述link和import的区别？</td>
+                <td>
+                    区别1：link是XHTML标签，除了加载CSS外，还可以定义RSS等其他事务；@import属于CSS范畴，只能加载CSS。<br>
+
+                    区别2：link引用CSS时，在页面载入时同时加载；@import需要页面网页完全载入以后加载。<br>
+
+                    区别3：link是XHTML标签，无兼容问题；@import是在CSS2.1提出的，低版本的浏览器不支持。<br>
+
+                    区别4：link支持使用Javascript控制DOM去改变样式；而@import不支持。
+                </td>
+            </tr>
+            <tr>
+                <td>37.你如何优化自己的代码？</td>
+                <td>
+                    代码重用：声明函数把整个过程封装起来；把他们弄成一些对象
+
+                    避免全局变量（命名空间，封闭空间，模块化mvc..） AngularJS
+
+                    拆分函数避免函数过于臃肿：单一职责原则：条理更加清晰，更好的维护
+
+                    适当的注释，尤其是一些复杂的业务逻辑或者是计算逻辑，都应该写出这个业务逻辑的具体过程
+
+                    内存管理，尤其是闭包中的变量释放
+
+                    变量的命名规范：尤其是在实际项目中
+
+                    $div：代表一个jquery对象
+
+                    dom：代表一个原生的dom对象
+
+                    希望一个函数是构造函数：函数的首字母都要大写
+
+                    变量一定要语义化：
+                </td>
+            </tr>
+            <tr>
+                <td>38.请用原生js实现jquery的get\post功能，以及跨域情况下</td>
+                <td>
+                    ajax<br>
+
+                    先创建一个HttpRequest()<br>
+
+                    再设置他的请求头：请求的数据类型：json/xml<br>
+
+                    再设置他的onreadstatechange<br>
+
+                    最后再提交这个请求
+                </td>
+            </tr>
+            <tr>
+                <td>39.请简要描述web前端性能需要考虑哪方面，你的优化思路是什么？</td>
+                <td>//参见雅虎14web优化规则
+
+                    //减少http请求：
+
+                    //1、小图弄成大图（雪碧图、精灵图），
+
+                    //2、合理的设置缓存 localStorage  cookie
+
+                    //3、资源合并、压缩 html代码的最小化，压缩体积：就是减少带宽
+
+                    //    一些小的js文件合并成大的js文件
+
+                    //将外部的js文件置底
+                </td>
+            </tr>
+            <tr>
+                <td>40.简述readyonly与disabled的区别？</td>
+                <td>
+                    readonly只针对input(text / password)和textarea有效，
+
+                    而disabled对于所有的表单元素都有效，当表单元素在使用了disabled后，当我们将表单以POST或GET的方式提交的话，这个元素的值不会被传递出去，而readonly会将该值传递出去
+                </td>
+            </tr>
+            <tr>
+                <td>41.请尽可能详尽的解释ajax的工作原理</td>
+                <td>
+                    Ajax的原理简单来说通过XmlHttpRequest对象来向服务器发异步请求，从服务器获得数据，然后用javascript来操作DOM而更新页面。这其中最关键的一步就是从服务器获得请求数据。要清楚这个过程和原理，我们必须对 XMLHttpRequest有所了解。
+
+                    　XMLHttpRequest是ajax的核心机制，它是在IE5中首先引入的，是一种支持异步请求的技术。简单的说，也就是javascript可以及时向服务器提出请求和处理响应，而不阻塞用户。达到无刷新的效果。
+
+                </td>
+            </tr>
+            <tr>
+                <td>41.为什么扩展javascript内置对象不是好的做法？</td>
+                <td>因为扩展内置对象会影响整个程序中所使用到的该内置对象的原型属性
+
+                    //如果说是整个项目中都适用的功能，那么可以进行扩展
+                </td>
+            </tr>
+            <tr>
+                <td>42.什么是三元表达式？“三元”表示什么意思？</td>
+                <td>? :
+
+                    因为运算符会涉及3个表达式
+
+                    var a=3>2?5:2;
+                </td>
+            </tr>
+            <tr>
+                <td>43.HTTP协议中，GET和POST有什么区别？分别适用什么场景 ？</td>
+                <td>
+                    get传送的数据长度有限制，post没有
+
+                    get通过url传递，在浏览器地址栏可见，post是在报文中传递
+
+                    适用场景：
+
+                    post一般用于表单提交
+
+                    get一般用于简单的数据查询，严格要求不是那么高的场景
+
+                </td>
+            </tr>
+            <tr>
+                <td>44.HTTP状态消息200 302 304 403 404 500分别表示什么</td>
+                <td>
+                    200：请求已成功，请求所希望的响应头或数据体将随此响应返回。<br>
+
+                    302：请求的资源临时从不同的 URI响应请求。由于这样的重定向是临时的，客户端应当继续向原有地址发送以后的请求。只有在Cache-Control或Expires中进行了指定的情况下，这个响应才是可缓存的<br>
+
+                    304：如果客户端发送了一个带条件的 GET 请求且该请求已被允许，而文档的内容（自上次访问以来或者根据请求的条件）并没有改变，则服务器应当返回这个状态码。304响应禁止包含消息体，因此始终以消息头后的第一个空行结尾。<br>
+
+                    403：服务器已经理解请求，但是拒绝执行它。<br>
+
+                    404：请求失败，请求所希望得到的资源未被在服务器上发现。<br>
+
+                    500：服务器遇到了一个未曾预料的状况，导致了它无法完成对请求的处理。一般来说，这个问题都会在服务器端的源代码出现错误时出现。
+                </td>
+            </tr>
+            <tr>
+                <td>45.HTTP协议中，header信息里面，怎么控制页面失效时间（last-modified,cache-control,Expires分别代表什么）？</td>
+                <td>
+
+                    Last-Modified
+
+                    文 档的最后改动时间。客户可以通过If-Modified-Since请求头提供一个日期，该请求将被视为一个条件GET，只有改动时间迟于指定时间的文档 才会返回，否则返回一个304（Not Modified）状态。Last-Modified也可用setDateHeader方法来设置。
+
+
+                    Expires
+
+                    应该在什么时候认为文档已经过期，从而不再缓存它？
+                </td>
+            </tr>
+            <tr>
+                <td>46.列举常用的js框架以及分别适用的领域？</td>
+                <td>
+                    jquery：简化了js的一些操作，并且提供了一些非常好用的API<br>
+
+                    jquery ui、jquery-easyui：在jqeury的基础上提供了一些常用的组件 日期，下拉框，表格这些组件<br>
+
+                    require.js、sea.js（阿里的玉帛）+》模块化开发使用的<br>
+
+                    jquery mobile：是jquery自己出的支持移动端网页开发，不过非常笨重，但是功能非常强大<br>
+
+                    zepto：精简版的jquery，常用于手机web前端开发 提供了一些手机页面实用功能,touch<br>
+
+                    ext.js：跟jquery差不多，但是不开源，也没有jquery轻量<br>
+
+                    angular、knockoutjs、avalon(去哪儿前端总监，作者：司徒正美)：MV*框架，适合用于单页应用开发(SPA)
+                </td>
+            </tr>
+            <tr>
+                <td>47.jQuery框架中$.ajax()的常用参数有哪些？</td>
+                <td>
+                    type<br><br>
+
+                    类型：String<br>
+
+                    默认值: "GET")。请求方式 ("POST" 或 "GET")， 默认为 "GET"。注意：其它 HTTP 请求方法，如 PUT 和 DELETE 也可以使用，但仅部分浏览器支持。<br>
+
+                    url<br><br>
+                    类型：String<br>
+
+                    默认值: 当前页地址。发送请求的地址。
+
+                    success<br><br>
+
+                    类型：Function<br>
+
+                    请求成功后的回调函数。<br>
+
+                    参数：由服务器返回，并根据 dataType 参数进行处理后的数据；描述状态的字符串。<br>
+
+                    这是一个 Ajax 事件。<br>
+
+                    options<br><br>
+
+                    类型：Object<br>
+
+                    可选。AJAX 请求设置。所有选项都是可选的。<br>
+
+                    async<br><br>
+
+                    类型：Boolean<br>
+
+                    默认值: true。默认设置下，所有请求均为异步请求。如果需要发送同步请求，请将此选项设置为 false。<br>
+
+                    注意，同步请求将锁住浏览器，用户其它操作必须等待请求完成才可以执行。<br>
+
+                    beforeSend(XHR)<br><br>
+
+                    类型：Function<br>
+
+                    发送请求前可修改 XMLHttpRequest 对象的函数，如添加自定义 HTTP 头。<br>
+
+                    XMLHttpRequest 对象是唯一的参数。<br>
+
+                    这是一个 Ajax 事件。如果返回 false 可以取消本次 ajax 请求。<br>
+
+                    cache<br><br>
+
+                    类型：Boolean<br>
+
+                    默认值: true，dataType 为 script 和 jsonp 时默认为 false。设置为 false 将不缓存此页面。<br>
+
+                    jQuery 1.2 新功能。<br>
+
+                    contentType<br><br>
+
+                    类型：String<br>
+
+                    默认值: "application/x-www-form-urlencoded"。发送信息至服务器时内容编码类型。<br>
+
+                    默认值适合大多数情况。如果你明确地传递了一个 content-type 给 $.ajax() 那么它必定会发送给服务器（即使没有数据要发送）。<br>
+
+                    data<br><br>
+
+                    类型：String<br>
+
+                    发送到服务器的数据。将自动转换为请求字符串格式。GET 请求中将附加在 URL 后。查看 processData 选项说明以禁止此自动转换。必须为Key/Value 格式。如果为数组，jQuery 将自动为不同值对应同一个名称。如 {foo:["bar1", "bar2"]} 转换为 '&foo=bar1&foo=bar2'。<br>
+
+                    dataFilter<br><br>
+
+                    类型：Function<br>
+
+                    给 Ajax 返回的原始数据的进行预处理的函数。提供 data 和 type 两个参数：data 是 Ajax 返回的原始数据，type 是调用 jQuery.ajax 时提供的dataType 参数。函数返回的值将由 jQuery 进一步处理。<br>
+
+                    dataType<br><br>
+
+                    类型：String<br>
+
+                    预期服务器返回的数据类型。如果不指定，jQuery 将自动根据 HTTP 包 MIME 信息来智能判断，比如 XML MIME 类型就被识别为 XML。在 1.4中，JSON 就会生成一个 JavaScript 对象，而 script 则会执行这个脚本。随后服务器端返回的数据会根据这个值解析后，传递给回调函数。可用值:<br>
+
+                    · "xml": 返回 XML 文档，可用 jQuery 处理。<br>
+
+                    · "html": 返回纯文本 HTML 信息；包含的 script 标签会在插入 dom 时执行。<br>
+
+                    · "script": 返回纯文本 JavaScript 代码。不会自动缓存结果。除非设置了 "cache" 参数。注意：在远程请求时(不在同一个域下)，所有 POST 请求都将转为 GET 请求。（因为将使用 DOM 的 script标签来加载）<br>
+
+                    · "json": 返回 JSON 数据 。<br>
+
+                    · "jsonp": JSONP 格式。使用 JSONP 形式调用函数时，如 "myurl?callback=?" jQuery 将自动替换 ? 为正确的函数名，以执行回调函数。<br>
+
+                    · "text": 返回纯文本字符串<br>
+
+                    error<br><br>
+
+                    类型：Function<br>
+
+                    默认值: 自动判断 (xml 或 html)。请求失败时调用此函数。<br>
+
+                    有以下三个参数：XMLHttpRequest 对象、错误信息、（可选）捕获的异常对象。<br>
+
+                    如果发生了错误，错误信息（第二个参数）除了得到 null 之外，还可能是 "timeout", "error", "notmodified" 和 "parsererror"。<br>
+
+                    这是一个 Ajax 事件。<br>
+
+                </td>
+            </tr>
+            <tr>
+                <td>48.Javascript中callee和caller的作用？</td>
+                <td>caller是返回一个对函数的引用，该函数调用了当前函数；<br>
+
+                    用法：fn.caller<br><br>
+
+                    callee是返回正在被执行的function函数，也就是所指定的function对象的正文。<br>
+
+                    用法：arguments.callee
+                </td>
+            </tr>
+            <tr>
+                <td>49.在Javascript中什么是伪数组？如何将伪数组转化为标准数组？</td>
+                <td>伪数组（类数组）：无法直接调用数组方法或期望length属性有什么特殊的行为，但仍可以对真正数组遍历方法来遍历它们。典型的是函数的argument参数，还有像调用getElementsByTagName,document.childNodes之类的,它们都返回NodeList对象都属于伪数组。
+
+                    可以使用Array.prototype.slice.call(fakeArray)将数组转化为真正的Array对象。
+                </td>
+            </tr>
+            <tr>
+                <td>50.、《正则》写出正确的正则表达式匹配固话号，区号3-4位，第一位为0，中横线，7-8位数字，中横线，3-4位分机号格式的固话号</td>
+                <td>/0[0-9]{2,3}-\d{7,8}/  010 021 020 025 028 0755：深圳</td>
+            </tr>
+            <tr>
+                <td>51.程序中捕获异常的方法？</td>
+                <td>if (!String.prototype.trim) {<br>
+
+                    String.prototype.trim = function() {<br>
+
+                    return this.replace(/^\s+/, "").replace(/\s+$/,"");<br>
+
+                    } }
+                </td>
+            </tr>
+            <tr>
+                <td>52.jQuery 的 slideUp动画 ，如果目标元素是被外部事件驱动, 当鼠标快速地连续触发外部元素事件, 动画会滞后的反复执行，该如何处理呢?</td>
+                <td>
+                    先stop(true,true)后slideUp()<br>
+
+                    示例代码参考：J:\代码,PPT,笔记,电子书\面试题\面试题_jquery_slideup.html<br>
+
+                    关于stop()参考：J:\代码,PPT,笔记,电子书\面试题\面试题_jquery.png
+                </td>
+            </tr>
+            <tr>
+                <td>53.Ajax 是什么? 如何创建一个Ajax？</td>
+                <td>
+                    Ajax并不算是一种新的技术，全称是asynchronous javascript and xml，可以说是已有技术的组合，主要用来实现客户端与服务器端的异步通信效果，实现页面的局部刷新，早期的浏览器并不能原生支持ajax，可以使用隐藏帧（iframe）方式变相实现异步效果，后来的浏览器提供了对ajax的原生支持<br>
+
+                    使用ajax原生方式发送请求主要通过XMLHttpRequest(标准浏览器)、ActiveXObject(IE浏览器)对象实现异步通信效果<br>
+
+                    基本步骤：<br><br>
+
+                    var xhr =null;//创建对象<br>
+
+                    if(window.XMLHttpRequest){<br>
+
+                    xhr = new XMLHttpRequest();<br>
+
+                    }else{<br>
+
+                    xhr = new ActiveXObject("Microsoft.XMLHTTP");<br>
+
+                    }<br>
+
+                    xhr.open(“方式”,”地址”,”标志位”);//初始化请求<br>
+
+                    xhr.setRequestHeader(“”,””);//设置http头信息<br>
+
+                    xhr.onreadystatechange =function(){}//指定回调函数<br>
+
+                    xhr.send();//发送请求
+
+                </td>
+            </tr>
+            <tr>
+                <td>54.同步和异步的区别?</td>
+                <td>
+                    同步：阻塞的<br><br>
+
+                    -张三叫李四去吃饭，李四一直忙得不停，张三一直等着，直到李四忙完两个人一块去吃饭<br>
+
+                    =浏览器向服务器请求数据，服务器比较忙，浏览器一直等着（页面白屏），直到服务器返回数据，浏览器才能显示页面<br>
+
+                    异步：非阻塞的<br><br>
+
+                    -张三叫李四去吃饭，李四在忙，张三说了一声然后自己就去吃饭了，李四忙完后自己去吃<br>
+
+                    =浏览器向服务器请求数据，服务器比较忙，浏览器可以自如的干原来的事情（显示页面），服务器返回数据的时候通知浏览器一声，浏览器把返回的数据再渲染到页面，局部更新
+
+                </td>
+            </tr>
+            <tr>
+                <td>55.GET和POST的区别，何时使用POST？</td>
+                <td>GET：一般用于信息获取，使用URL传递参数，对所发送信息的数量也有限制，一般在2000个字符，有的浏览器是8000个字符<br>
+
+                    POST：一般用于修改服务器上的资源，对所发送的信息没有限制<br>
+
+                    在以下情况中，请使用 POST 请求：<br>
+
+                    1. 无法使用缓存文件（更新服务器上的文件或数据库）<br>
+
+                    2. 向服务器发送大量数据（POST 没有数据量限制）<br>
+
+                    3. 发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠
+                </td>
+            </tr>
+            <tr>
+                <td>56.ajax的缺点</td>
+                <td>
+                    1、ajax不支持浏览器back按钮。<br>
+
+                    2、安全问题 AJAX暴露了与服务器交互的细节。<br>
+
+                    3、对搜索引擎的支持比较弱。//不会执行你的js脚本，只会操作你的网页源代码<br>
+
+                    4、破坏了程序的异常机制。<br>
+
+                    5、无法跨域请求，解决方式：jsonp
+
+                </td>
+            </tr>
+            <tr>
+                <td>57.http常见的状态码有那些？分别代表是什么意思？</td>
+                <td>200 OK      //客户端请求成功<br>
+
+                    400 Bad Request  //客户端请求有语法错误，不能被服务器所理解<br>
+
+                    403 Forbidden  //服务器收到请求，但是拒绝提供服务<br>
+
+                    404 Not Found  //请求资源不存在，输入了错误的URL<br>
+
+                    500 Internal Server Error //服务器发生不可预期的错误<br>
+
+                    503 Server Unavailable  //服务器当前不能处理客户端的请求，一段时间后可能恢复正常
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

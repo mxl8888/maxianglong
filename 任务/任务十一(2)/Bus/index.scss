@@ -1,0 +1,139 @@
+@import 'normalize.css';
+$baseFontsize:14px !default;
+$fontStack:    Helvetica, sans-serif;
+$baseLineHeight: 10px !default;
+//颜色
+$primaryColor: #cdf5ff #FF072F #5A4948 #0901B5 #FFF #4FD2D5;
+$baseWidth:100%;
+//盒子宽高的公共部分
+@mixin box ($publicWidth,$publicHeight) {
+  width:$publicWidth;
+  height:$publicHeight;
+}
+//外边距margin公共部分
+@mixin margin ($top,$right,$bottom,$left) {
+  margin:$top $right $bottom $left;
+}
+//border的公共部分
+@mixin border ($publicborder:1px solid #ccc) {
+  border:$publicborder;
+}
+body {
+  font-family: $fontStack;
+  background-color:nth($primaryColor,1) ;
+}
+.container{
+  @include box(35%,auto);
+  @include margin(30px,auto,20px,auto);
+  border: 30px solid nth($primaryColor,2);
+
+  .content{
+    @include box(85%,500px);
+    border: 3px solid nth($primaryColor,3);
+    @include margin(30px,auto,30px,auto);
+
+      .main{
+        @include box(90%,400px);
+        @include margin(10px,auto,10px,auto);
+        header{
+          @include box(100%,100px);
+
+          div{
+            @include box(30%,100%);
+            background:nth($primaryColor,4);
+            float: left;
+
+            .c-103{
+              font-size: $baseFontsize * 4;
+              color:nth($primaryColor,5);
+              text-align: center;
+              line-height: $baseLineHeight * 10;
+            }
+          }
+          p{
+            float: left;
+            color:nth($primaryColor,2);
+            font-size:$baseFontsize * 2;
+            @include margin(0,auto,0,25px);
+
+            &:last-child{
+              color:nth($primaryColor,4);
+              @include margin(40px,auto,0,40px);
+              font-size:$baseFontsize + 4;
+              //箭头
+              .arrow{
+                position: relative;
+                top:-5px;
+                font-size: 0;
+                line-height: 0;
+                border: {
+                  width: 5px;
+                  color: nth($primaryColor,4);
+                  style: dashed;
+                  right:{
+                    width: 0;
+                  }
+                  left:{
+                    style: solid;
+                  }
+                  top:{
+                    color: transparent;
+                  }
+                  bottom:{
+                    color: transparent;
+                  }
+                }
+              }
+            }
+
+          }
+        }
+        nav{
+          margin-top:10px;
+          @include box(100%,50px);
+          background:nth($primaryColor,6);
+          p{
+            color:nth($primaryColor,5);
+            font-size:$baseFontsize + 8;
+            @include margin(15px,0,15px,0);
+            float: left;
+          }
+
+          div{
+            @include box(200px,40px);
+            float: right;
+            @include margin(5px,0,5px,0);
+              p{
+                font-size:$baseFontsize + 2;
+                margin:0;
+                &:last-child{
+                  margin-top: 5px;
+                }
+              }
+          }
+        }
+        article{
+          div{
+            @include box(150px,300px);
+            border-left:3px solid red;
+            border-right:3px solid red;
+            margin-top: 15px;
+
+            p{
+              text-align: center;
+              color:nth($primaryColor,4) ;
+              font-weight: bold;
+            }
+          }
+          .a-left{
+          float: left;
+            margin-left: -110px;
+          }
+          .a-right{
+            float: right;
+          }
+        }
+      }
+  }
+}
+

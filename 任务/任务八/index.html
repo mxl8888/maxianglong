@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>百度新闻首页</title>
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/news.css" type="text/css">
+    <link rel="stylesheet" href="font/iconfont.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <header class="cf">
+            <a href="#" class="logo"><span class="iconfont">&#x343a;</span></a>
+            <a href="#" class="user"><span class="iconfont">&#xe625;</span></a>
+            <a href="#" class="search"><span class="iconfont">&#xe637;</span></a>
+            <a href="#" class="more"><span class="iconfont">&#xe634;</span></a>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">精选</a><i></i></li>
+                <li><a href="#">百家</a><i></i></li>
+                <li><a href="#">本地</a><i></i></li>
+                <li><a href="#">图片</a><i></i></li>
+                <li><a href="#">娱乐</a><i></i></li>
+                <li><a href="#">社会</a><i></i></li>
+                <li><a href="#">军事</a><i></i></li>
+                <li><a href="#">女人</a><i></i></li>
+                <li><a href="#">搞笑</a><i></i></li>
+                <li><a href="#">互联网</a><i></i></li>
+                <li><a href="#">更多</a><i></i></li>
+            </ul>
+        </nav>
+        <article class="news-main">
+            <div class="news-main1">
+                <img src="img/lno1 (3).jpg" width="100%">
+                <p>
+                    <span class="news-lists-hot">热点</span>
+                    <span class="news-lists-hots">国务院2017年节假日放假安排</span>
+                </p>
+            </div>
+            <ul class="news-lists">
+                <li class="news-list">
+                    <div class="newsimg">
+                        <img src="img/lno1 (1).jpg" width="100%">
+                    </div>
+                    <div class="newscontent">
+                        <h1>正部级单位也吸一样的空气：实拍霾中各大部委</h1>
+                        <p><span class="newstime">2016-12-22</span><span class="newssrc">搜狐财经</span></p>
+                    </div>
+                </li>
+                <li class="news-list">
+                    <div class="newsimg">
+                        <img src="img/lno1 (2).jpg" width="100%">
+                    </div>
+                    <div class="newscontent">
+                        <h1>正部级单位也吸一样的空气：实拍霾中各大部委</h1>
+                        <p><span class="newstime">2016-12-22</span><span class="newssrc">搜狐财经</span></p>
+                    </div>
+                </li>
+                <li class="news-list">
+                    <div class="newsimg">
+                        <img src="img/lno1 (4).jpg" width="100%">
+                    </div>
+                    <div class="newscontent">
+                        <h1>正部级单位也吸一样的空气：实拍霾中各大部委</h1>
+                        <p><span class="newstime">2016-12-22</span><span class="newssrc">搜狐财经</span></p>
+                    </div>
+                </li>
+            </ul>
+            <div class="news-main2">
+                <h2>用共生模式构建的双边生态 才是服务电商的未来？</h2>
+                <div class="news-main2-img">
+                    <img src="img/car1 (1).jpg">
+                    <img src="img/car1 (2).jpg">
+                    <img src="img/car1 (3).jpg">
+                </div>
+                <p>
+                    <span>16分钟前</span>
+                    <span>百家原创</span>
+                <p>
+            </div>
+        </article>
+    </div>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var deviceWidth = $("body").width();
+            $("nav li").each(function(index,item){
+                //判断当前对象a中有几个字
+               if( $(this).find("a").html().split("").length>2){
+                   $(this).width(deviceWidth/3);
+               }else {
+                   $(this).width(deviceWidth/6);
+               }
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/news.js"></script>
+</body>
+</html>

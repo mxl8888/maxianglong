@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>数组和对象</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var arr =['a','e','c','s','a','s','e','f','a','c','a','a'];
+	//定义一个计数数组，初始值为空，用于记录值的个数。
+	var count ={};
+	//定义一个索引数组，初始值为空，用于记录值的位置。
+	var pos ={};
+	//for 循环从0开始读出数组的每个值
+	for (var i = 0; i< arr.length; i++){
+		//把数组每个值赋给变量char，通过对char进行判断，开始记录每个值的个数和位置。
+		var char = arr[i];
+		//判断计数 索引数组中是否含有arr的值。
+		if (count[char]) {
+		//如果计数数组含有arr的值，那么计算数组值加1 例如前面有a 结果为2。
+		count[char] +=1;
+		//记录arr值得位置，此处记录从第一次遍历时候的值，前面加，隔开
+		pos[char] += ',' + i;
+		//alert(pos[char]);
+	}else{
+			//如果计算组中没有arr值，那么计数组此值加1，例如前面有a 结果为1
+			count[char] = 1;
+			//alert(count[char]);
+			pos[char] = i;
+				//alert(pos[char]);
+		}
+	}
+	//打印出计数数组的值
+	for(var cd in count){
+		document.write( cd +':'+ count[cd]);
+	}
+	//打印出索引数组的值
+	for(var cd in pos){
+		document.write( '<br>' + cd +':'+ pos[cd])
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+/*Basic reset*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font: 16px Arial,sans-serif;
+}
+html{
+    height:100%;
+    background:url('./15q.jpg');
+}
+
+#calculator{
+    margin: 15px auto;
+    width:330px;
+    height:420px;
+    border: 1px solid lightgray;
+    background:url("./74.jpg");
+    padding:15px;
+    margin-top: 100px;
+}
+/*LOGO*/
+.LOGO{
+    height:20px;
+
+}
+.LOGO span{
+    font-size: 18px;
+    color:purple;
+    font-weight: bold;
+}
+/*screen*/
+#shuRu{
+    margin-top:15px;
+}
+.screen{
+    width:300px;
+    height:40px;
+    text-align: right;
+    padding-right:10px;
+    font-size:20px;
+    background: url('./15q.jpg');
+    background-size: 300px,20px;
+}
+#keys{
+    border:1px solid lightgray;
+    height:280px;
+    margin-top:25px;
+    padding:8px;
+}
+#keys .last{
+    margin-right:0px;
+}
+input{
+    color:#fff;
+}
+input[type="button"]{
+    float:left;
+    width: 42px;
+    height: 36px;
+    text-align:center;
+    background-color:orange;
+    margin: 0 17px 20px 0;
+}
+input:nth-child(5),
+input:nth-child(10),
+input:nth-child(15),
+input:nth-child(20)
+{
+    background: rebeccapurple;
+    margin-right:0px
+}
+input[type="button"]:nth-child(22){
+    width: 120px;
+    background:blue;
+    position: relative;
+    right: -20px;
+}
+input[type="button"]:nth-child(21){
+    width: 120px;
+    background:blue;
+    margin-left: 0;
+}

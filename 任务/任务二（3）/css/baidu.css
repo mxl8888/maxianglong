@@ -1,0 +1,217 @@
+body{
+    font-size: 12px;
+}
+header{
+    overflow: hidden;
+}
+header nav{
+    width: 38%;
+    float: right;
+}
+header nav a{
+    margin-left: 15px;
+}
+.more{
+    background-color: #3385ff;
+    font-size: 12px;
+    color:#fff;
+    text-decoration: none;
+    height: 25px;
+    width: 67px;
+   line-height:26px;
+}
+.more:hover{
+    background:#eee;
+    color:#000;
+}
+ul li{
+    list-style: none;
+}
+nav ul li a {
+    width:66px;
+    height:76px;
+    text-align:center;
+    line-height:40px;
+    display:block;
+    background:#eee;
+    color:#666;
+}
+ ul li ul {
+    position:absolute;
+    left: 0px;
+    display:none;
+}
+nav ul li ul li a {
+    border-right:none;
+    border-top:1px dotted #ccc;
+    text-decoration:none;
+    line-height: 120px;
+    text-align: center;
+}
+nav ul li ul li a:hover{
+    text-decoration: underline;
+}
+nav ul li:hover ul {
+    display:block;
+}
+nav ul li ul li img{
+    position: absolute;
+    right:8px;
+
+}
+
+.img1{
+    background-image: url("5.png");
+}
+.content{
+    text-align: center;
+}
+.more1{
+
+    position: absolute;
+    top:-10px;
+    right:30px;
+}
+.content{
+    width: 50%;
+    margin: 0 auto;
+}
+.content img{
+    width: 270px;
+    height: 129px;
+}
+.content input{
+    width: 500px;
+    height: 34px;
+}
+.content button{
+    width: 100px;
+    height:41px;
+    background-color: #3385ff;
+    margin-left: -7px;
+    font-size: 14px;
+    color: #fff;
+}
+footer{
+    text-align: center;
+    height: 100px;
+    position: absolute;
+    bottom: 23px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.right{
+    display: inline-block;
+}
+.foot{
+    float: left;
+    margin-left: 20px
+}
+.foot-text{
+    float: left;
+    margin: 2px 0 0 10px;
+}
+.left{
+    padding-left:-20px;
+
+}
+/*移动端*/
+@media only screen and (max-width:412px){
+    .pc{display: none;}
+    .mb{display: block;}
+}
+
+/*移动端样式*/
+
+/*mb样式*/
+.mb{display: none;}
+
+/*中间导航部分*/
+#mb-nav{
+    width:100%;
+    overflow:hidden
+;}
+.btn1{
+    background: #38f;
+    color: #fff;
+    font-size:16px;
+    height: 52px;
+    width: 95px;
+    position: absolute;
+    left: 267px;
+    top: 124px;
+}
+.mb-input{
+  width:250px;
+    position: absolute;
+    top: 125px;
+    left:15px;
+    height: 45px;
+}
+.nav-wrap{
+    width:3000px;
+    margin-top:130px;
+}
+.navp{
+    width:22px;
+    height:22px;
+    top:196px;
+    position:absolute;
+}
+.nav-picture-gz{
+    left:34px;
+    background-position:0 -264px;
+}
+.nav-text-gz{
+    left:30px;
+}
+.nav-picture-news{
+    left:90px;
+    background-position:0 -396px;
+}
+.navt{
+    font-size:15px;
+    color:#999;
+    position:absolute;
+    top:223px;
+    text-decoration:none;
+}
+.nav-text-news{
+    left:85px;
+}
+.nav-picture-book{
+    left:145px;
+    background-position:0 -330px;
+}
+.nav-text-book{
+    left:140px;
+}
+.nav-picture-video{
+    left:200px;
+    background-position:0 -462px;
+}
+.nav-text-video{
+    left:195px;
+}
+.nav-picture-nuo{
+    left:255px;
+    background-position:0 -418px;
+}
+.nav-text-nuo{
+    left:250px;
+}
+.nav-picture-tap{
+    eft:310px;
+    background-position:0 -308px;
+}
+.nav-text-tap{
+    left:305px;
+}
+
+/*设置屏幕小于400px时显示移动端*/
+@media only screen and (max-width:400px){
+    .pc{display: none;}
+    .mb{display: block;}
+}

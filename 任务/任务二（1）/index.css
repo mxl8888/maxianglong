@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.content{
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+.first{
+    width: 100px;
+    height: 100px;
+    background: orange;
+    position: relative;
+    left: 100px;
+}
+.second{
+    width: 100px;
+    height: 100px;
+    background:greenyellow ;
+    float: left;
+}
+.third{
+    width: 100px;
+    height: 100px;
+    background-image: url("http://cdn-img.easyicon.net/png/5838/583822.gif");
+    float: left;
+}
+.fourth{
+    width: 100px;
+    height: 100px;
+    background:pink ;
+    float: left;
+}
+.fifth{
+    width: 100px;
+    height: 100px;
+    background:greenyellow ;
+    position: relative;
+    top: 100px;
+    left:100px;
+}

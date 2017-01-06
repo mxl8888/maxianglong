@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>任务二（2）表单</title>
+    <link rel="stylesheet" href="form.css" type="text/css">
+</head>
+<body>
+    <div class="box">
+    <div class="box1">
+    <header>
+        <img src="http://www.qdjj.net/images/qdjjlogo.gif">
+        <div>
+            <a href="/">注册</a>
+            <a href="/">登录</a>
+            <a href="/">收藏本站</a>
+         </div>
+    </header>
+    <article>
+        <form action="">
+            <table width="710" border="1" cellpadding="0" cellspacing="0">
+                <caption><h2>新教员注册第二步</h2></caption><br>
+                <thead>
+                    <tr>
+                        <td colspan="2" class="head">您的注册资料越详细就越有利于家长和学员检索，也就越容易获得家长的预约，所以请您务必如实详细地填写。 其中红色星号（<span class="star">*</span>）为必填。我们已对您的个人信息做保密处理，您的信息是安全的。
+                       <p> 您选择的是<span class="star">大学生</span>身份,若有误请<a href="http://www.jikexueyuan.com/">返回</a>更改</p>
+                         </td>
+                     </tr>
+                    <br>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="right"><span class="star">*</span>真实姓名：</td>
+                        <td>
+                            <input type="text">
+                            <p><span class="star">注意：</span><span class="blue">姓名应与身份证完全一致，本网站将对你的姓名严格保密，只显示您的姓，如“张教员”。此部分将在认证时严格审查，一经填写不得修改，与证件不符者将不能通过认证！</span></p>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="right">身份证/护照：</td>
+                        <td>
+                            <input type="text">
+                            <span class="blue">(此项将严格保密，不对外公开)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>性别：</td>
+                        <td>
+                            <select size="1" name="sex" id="select">
+                                <option value>请选择...</option>
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>*出生年份：;</td>
+                        <td>
+                            <select size="1" nane="year" id="years">
+                                <option value="选择 年" selected>选择 年</option>
+                                <option value="1999">1999</option>
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
+                                <option value="2005">2005</option>
+                                <option value="2006">2006</option>
+                                <option value="2007">2007</option>
+                                <option value="2008">2008</option>
+                                <option value="2009">2009</option>
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>专业：</td>
+                        <td>
+                            <input type="text">
+                            <span class="blue">请如实填写专业全名，以学生证为准。此部分将在认证时严格审查，与证件不符者将不能通过认证！</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>目前（最高）学历：</td>
+                        <td>
+                            <select size="1" name="xueli" id="knowledge">
+                                <option value selected>—请选择—</option>
+                                <option value="大专以上">大专以上</option>
+                                <option value="大专">大专</option>
+                                <option value="本科">本科</option>
+                                <option value="硕士">硕士</option>
+                                <option value="博士">博士</option>
+                            </select>
+                        </td>
+                     </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>目前身份：</td>
+                        <td>
+                            <select size="1" name="shenfen" id="muqianshenfen">
+                                <option value="请选择" selected>—请选择—</option>
+                                <option value="大专在读">大专在读</option>
+                                <option value="本科大一">本科大一</option>
+                                <option value="本科大二">本科大二</option>
+                                <option value="本科大三">本科大三</option>
+                                <option value="本科大四">本科大四</option>
+                                <option value="本科大五">本科大五</option>
+                                <option value="在读硕士生">在读硕士生</option>
+                                <option value="硕士进修老师">硕士进修老师</option>
+                                <option value="在读博士生">在读博士生</option>
+                                <option value="其他学生">其他学生</option>
+                             </select>
+                                <span class="blue">请及时更新自己的身份，暑假期间注册，请选择下一学期的身份</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>籍贯（生源地）：</td>
+                        <td>
+                            <select size="1" name="jiguan" id="chushengdi">
+                                <option value="" selected>—请选择—</option>
+                                <option value="青岛市南">青岛市南</option>
+                                <option value="青岛市北">青岛市北</option>
+                                <option value="青岛四方">青岛四方</option>
+                                <option value="青岛李沧">青岛李沧</option>
+                                <option value="青岛崂山">青岛崂山</option>
+                                <option value="青岛城阳">青岛城阳</option>
+                                <option value="青岛黄岛">青岛黄岛</option>
+                                <option value="青岛即墨">青岛即墨</option>
+                            </select>
+                            <span class="blue">（并非指当前所在地）</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>毕业/就读高校：</td>
+                        <td>
+                            <select size="1" name="biye" id="gaoxiao">
+                                <option value="" selected>—请选择—</option>
+                                <option value="辽宁科技大学">辽宁科技大学</option>
+                                <option value="辽宁科技学院">辽宁科技学院</option>
+                            </select>
+                            <span class="blue">若列表中无选项，请在文本框中填写<input type="text" name="daxue"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>高中母校：</td>
+                        <td>
+                            <span class="blue"><input type="text" name="gaozhong">请填全称（省份、市、中学名称，如果是省市重点中学请注明）</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"  bgcolor="#EEE" ><span class="blue1"><strong>联系方式</strong></span></td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>手机/小灵通：</td>
+                        <td>
+                            <span class="blue">
+                                <input type="text" name="shouji">最好留下多个联系方式，换号时请及时更新联系方式
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>目前住所：</td>
+                        <td>
+                            <select name="zhusuo" id="muqianzhusuo">
+                                <option value="" class="">—请选择—</option>
+                                <option value="沈阳">沈阳</option>
+                                <option value="鞍山">鞍山</option>
+                                <option value="朝阳">朝阳</option>
+                                <option value="大连">大连</option>
+                                <option value="营口">营口</option>
+                            </select>
+                            <span class="blue">请选择最近的地点</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right">*Email：</td>
+                        <td>
+                            <span class="blue"><input type="email" name="email">(为通知合适您的家教及找回密码，请认真填写)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right">QQ</td>
+                        <td><input type="qq" name="qq"></td>
+                    </tr>
+                    <tr>
+                        <td class="right">详细地址：</td>
+                        <td>
+                            <span class="blue"><input type="address" name="address">(以方便我们给您寄送家教相关资料及协议等。)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" bgcolor="#EEE" ><span class="blue1"><strong>家庭信息</strong></span></td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>普通话：</td>
+                        <td>
+                            <select name="putonghua" id="puhua">
+                                <option value="" selected>—请选择—</option>
+                                <option value="一般">一般</option>
+                                <option value="标准">标准</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>第一外语：</td>
+                        <td>
+                            <select name="first" id="firstwaiyu" size="1">
+                                <option value="" selected>—请选择—</option>
+                                <option value="英语">英语</option>
+                                <option value="法语">法语</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>第二外语：</td>
+                        <td>
+                            <select name="second" id="secondwaiyu"size="1">
+                                <option value="" selected>无</option>
+                                <option value="汉语">汉语</option>
+                                <option value="蒙语">蒙语</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>自我描述与<br />特长展示：</td>
+                        <td>
+                            <textarea name="techang" cols="60" rows="6" id="">
+                            </textarea>
+                            <p class="blue">全面展示你的实力和优势特长，增加你简历的含金量！例如：在比赛中得过什么重要奖项，获得过什么奖学金，取得什么样的高考成绩，有哪些能证明你能力的资格证书之类。 不得少于50字，不得超过500字。家长选择你的重要依据，请认真填写！</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right">家教经历<br />（教学成果）：</td>
+                        <td>
+                            <textarea name="jingli" id="jiating" cols="60" rows="6">
+                            </textarea>
+                            <p class="blue">这些内容是对您教学水平最有力和最直接的反映！是学员选择您的一项重要依据。字数500字以内。最好说明辅导时间、学生年级、辅导效果。可参考以下形式：2008年10月-12月，市南区初三学生英语，期终考试从全班第30名上升至第10名，英语从60分提升到80分。</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>可辅导的科目<br />（不超过10项）：</td>
+                        <td>
+                            <p class="star">教员在选择中考、高考、雅思、新概念等有难度科目时应量力而行，最好有实际辅导经验。</p>
+                            <p>-----小学-----</p>
+                            <p>
+                                <input type="checkbox" name="xiaoxue" value="小学语文">小学语文
+                                <input type="checkbox" name="xiaoxue" value="小学语文">小学语文
+                                <input type="checkbox" name="xiaoxue" value="小学语文">小学语文
+                                <input type="checkbox" name="xiaoxue" value="小学语文">小学语文
+                            </p>
+                            <p>-----初中-----</p>
+                            <p>
+                                <input type="checkbox" name="xiaoxue" value="初中数学">初中数学
+                                <input type="checkbox" name="xiaoxue" value="初中数学">初中数学
+                                <input type="checkbox" name="xiaoxue" value="初中数学">初中数学
+                                <input type="checkbox" name="xiaoxue" value="初中数学">初中数学
+                                <input type="checkbox" name="xiaoxue" value="初中数学">初中数学
+                                <input type="checkbox" name="xiaoxue" value="初中数学">初中数学
+                                <input type="checkbox" name="xiaoxue" value="初中数学">初中数学
+                                <input type="checkbox" name="xiaoxue" value="初中数学">初中数学
+                                <input type="checkbox" name="xiaoxue" value="初中数学">初中数学
+                                <input type="checkbox" name="xiaoxue" value="初中数学">初中数学
+                            </p>
+                            <p>-----高中-----</p>
+                            <p>
+                                <input type="checkbox" name="xiaoxue" value="高中化学">高中化学
+                                <input type="checkbox" name="xiaoxue" value="高中化学">高中化学
+                                <input type="checkbox" name="xiaoxue" value="高中化学">高中化学
+                                <input type="checkbox" name="xiaoxue" value="高中化学">高中化学
+                                <input type="checkbox" name="xiaoxue" value="高中化学">高中化学
+                                <input type="checkbox" name="xiaoxue" value="高中化学">高中化学
+                            </p>
+                            <p>-----英语-----</p>
+                            <p>
+                                <input type="checkbox" name="xiaoxue" value="雅思英语">雅思英语
+                                <input type="checkbox" name="xiaoxue" value="雅思英语">雅思英语
+                                <input type="checkbox" name="xiaoxue" value="雅思英语">雅思英语
+                                <input type="checkbox" name="xiaoxue" value="雅思英语">雅思英语
+                                <input type="checkbox" name="xiaoxue" value="雅思英语">雅思英语
+                                <input type="checkbox" name="xiaoxue" value="雅思英语">雅思英语
+                                <input type="checkbox" name="xiaoxue" value="雅思英语">雅思英语
+                            </p>
+                            <p>-----小语种-----</p>
+                            <p>
+                                <input type="checkbox" name="xiaoxue" value="日语">日语
+                                <input type="checkbox" name="xiaoxue" value="日语">日语
+                                <input type="checkbox" name="xiaoxue" value="日语">日语
+                                <input type="checkbox" name="xiaoxue" value="日语">日语
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>最擅长的科目：</td>
+                        <td>
+                            <span class="blue"><input type="text">请填写你最拿手、最有经验的科目，例如：“英语、初中数理化、高三数学”，越具体越好，不超过三项</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>方便授课区域</td>
+                        <td>
+                            <p>	-----市南---<span class="star"><input type="checkbox"name="city" value="市区南">市区南</span></p>
+                            <p>
+                                <input type="checkbox" name="city" value="沈北">沈北
+                                <input type="checkbox" name="city" value="铁西">铁西
+                                <input type="checkbox" name="city" value="皇姑">皇姑
+                                <input type="checkbox" name="city" value="于洪">于洪
+                                <input type="checkbox" name="city" value="三台子">三台子
+                                <input type="checkbox" name="city" value="重工">重工
+                                <input type="checkbox" name="city" value="启工">启工
+                            </p>
+                            <p>	-----市南---<span class="star"><input type="checkbox"name="city" value="市区南">市区南</span></p>
+                            <p>
+                                <input type="checkbox" name="city" value="沈北">沈北
+                                <input type="checkbox" name="city" value="铁西">铁西
+                                <input type="checkbox" name="city" value="皇姑">皇姑
+                                <input type="checkbox" name="city" value="于洪">于洪
+                                <input type="checkbox" name="city" value="三台子">三台子
+                                <input type="checkbox" name="city" value="重工">重工
+                                <input type="checkbox" name="city" value="启工">启工
+                            </p>
+                            <p>	-----市南---<span class="star"><input type="checkbox"name="city" value="市区南">市区南</span></p>
+                            <p>
+                                <input type="checkbox" name="city" value="沈北">沈北
+                                <input type="checkbox" name="city" value="铁西">铁西
+                                <input type="checkbox" name="city" value="皇姑">皇姑
+                                <input type="checkbox" name="city" value="于洪">于洪
+                                <input type="checkbox" name="city" value="三台子">三台子
+                                <input type="checkbox" name="city" value="重工">重工
+                                <input type="checkbox" name="city" value="启工">启工
+                            </p>
+                            <p>	-----市南---<span><input type="checkbox"name="city" value="市区南">市区南</span></p>
+                            <p>	-----市南---<span><input type="checkbox"name="city" value="市区南">市区南</span></p>
+                            <p>	-----市南---<span><input type="checkbox"name="city" value="市区南">市区南</span></p>
+                            <p>	-----市南---<span><input type="checkbox"name="city" value="市区南">市区南</span></p>
+                            <p>	-----市南---<span><input type="checkbox"name="city" value="市区南">市区南</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>可授课时间：</td>
+                        <td>
+                            <span class="blue">
+                                <input type="text"name="shouke" value="授课无时间限制">
+                                （请注意及时更新授课时间）
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>辅导方式：</td>
+                        <td>
+                            <input type="checkbox" name="fudaofanshi" value="教员上门">教员上门
+                            <input type="checkbox" name="fudaofanshi" value="学员上门">学员上门
+                            <input type="checkbox" name="fudaofanshi" value="网上辅导">网上辅导
+                            <input type="checkbox" name="fudaofanshi" value="可协商">可协商
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right"><span class="star">*</span>薪酬要求：</td>
+                        <td>
+                            <textarea name="techang" cols="60" rows="6" id="">执行青岛家教网薪水标准</textarea>
+                            <p class="blue">
+                                默认为接受青岛家教网的课时费标准（查看详细的报酬标准<变成链接>)，如果不同意，也可以在表中列出自己的薪酬要求，如：小学**元/时、小学奥数**元/时、初一**元/时、高三**元/时、钢琴**元/时、陪读**元/月。</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <button type="button">
+                                提交
+                            </button>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        </form>
+    </article>
+    <footer>
+        <span>Copyright © 2003～2008 版权所有 青岛家教网</span>
+    </footer>
+     </div>
+     </div>
+</body>
+</html>

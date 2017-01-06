@@ -1,0 +1,124 @@
+@import url(normalize.css);
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #cdf5ff;
+}
+
+.container {
+  width: 35%;
+  height: auto;
+  margin: 30px auto 20px auto;
+  border: 30px solid #FF072F;
+}
+
+.container .content {
+  width: 85%;
+  height: 500px;
+  border: 3px solid #5A4948;
+  margin: 30px auto 30px auto;
+}
+
+.container .content .main {
+  width: 90%;
+  height: 400px;
+  margin: 10px auto 10px auto;
+}
+
+.container .content .main header {
+  width: 100%;
+  height: 100px;
+}
+
+.container .content .main header div {
+  width: 30%;
+  height: 100%;
+  background: #0901B5;
+  float: left;
+}
+
+.container .content .main header div .c-103 {
+  font-size: 56px;
+  color: #FFF;
+  text-align: center;
+  line-height: 100px;
+}
+
+.container .content .main header p {
+  float: left;
+  color: #FF072F;
+  font-size: 28px;
+  margin: 0 auto 0 25px;
+}
+
+.container .content .main header p:last-child {
+  color: #0901B5;
+  margin: 40px auto 0 40px;
+  font-size: 18px;
+}
+
+.container .content .main header p:last-child .arrow {
+  position: relative;
+  top: -5px;
+  font-size: 0;
+  line-height: 0;
+  border-width: 5px;
+  border-color: #0901B5;
+  border-style: dashed;
+  border-right-width: 0;
+  border-left-style: solid;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.container .content .main nav {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  background: #4FD2D5;
+}
+
+.container .content .main nav p {
+  color: #FFF;
+  font-size: 22px;
+  margin: 15px 0 15px 0;
+  float: left;
+}
+
+.container .content .main nav div {
+  width: 200px;
+  height: 40px;
+  float: right;
+  margin: 5px 0 5px 0;
+}
+
+.container .content .main nav div p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.container .content .main nav div p:last-child {
+  margin-top: 5px;
+}
+
+.container .content .main article div {
+  width: 150px;
+  height: 300px;
+  border-left: 3px solid red;
+  border-right: 3px solid red;
+  margin-top: 15px;
+}
+
+.container .content .main article div p {
+  text-align: center;
+  color: #0901B5;
+  font-weight: bold;
+}
+
+.container .content .main article .a-left {
+  float: left;
+  margin-left: -110px;
+}
+
+.container .content .main article .a-right {
+  float: right;
+}
